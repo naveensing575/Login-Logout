@@ -21,7 +21,6 @@ function App() {
   const logoutHandler = () => {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("email");
-    localStorage.removeItem("password");
     setIsLoggedIn(false);
   };
 
