@@ -17,6 +17,7 @@ const Login = (props) => {
     setFormIsValid(
       event.target.value.includes("@") && enteredPassword.trim().length > 6
     );
+    localStorage.setItem("email", enteredEmail);
   };
 
   const passwordChangeHandler = (event) => {
@@ -25,6 +26,7 @@ const Login = (props) => {
     setFormIsValid(
       event.target.value.trim().length > 6 && enteredEmail.includes("@")
     );
+    localStorage.setItem("password", enteredPassword);
   };
 
   const validateEmailHandler = () => {
