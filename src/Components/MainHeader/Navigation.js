@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import classes from "./Navigation.module.css";
 import AuthContext from "../../Context/auth-context";
 
-const Navigation = (props) => {
+const Navigation = () => {
   const { isLoggedIn, onLogout } = useContext(AuthContext);
   return (
     <nav className={classes.nav}>
