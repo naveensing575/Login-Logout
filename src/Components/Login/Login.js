@@ -40,13 +40,11 @@ const Login = (props) => {
 
   useEffect(() => {
     const formValidator = setTimeout(() => {
-      console.log("checking form validity");
       setFormIsValid(emailIsValid && passwordIsValid);
     }, 500);
     localStorage.setItem("email", emailState.value);
 
     return () => {
-      console.log("cleanup");
       clearTimeout(formValidator);
     };
   }, [emailIsValid, passwordIsValid, emailState]);
