@@ -26,8 +26,13 @@ function App() {
   };
 
   return (
-    <AuthContext.Provider value={useMemo(() => ({ isLoggedIn }), [isLoggedIn])}>
-      <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
+    <AuthContext.Provider
+      value={useMemo(
+        () => ({ isLoggedIn, onLogout: logoutHandler }),
+        [isLoggedIn]
+      )}
+    >
+      <MainHeader />
       <main>
         {!isLoggedIn && <Login onLogin={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}
