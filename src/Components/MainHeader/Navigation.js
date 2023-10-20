@@ -9,7 +9,7 @@ const Navigation = () => {
       <ul>
         {isLoggedIn && (
           <li>
-            <a href="/">Users</a>``
+            <a href="/">Users</a>
           </li>
         )}
         {isLoggedIn && (
