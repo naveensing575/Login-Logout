@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../UI/Card/Card";
 import classes from "./Home.module.css";
 
-const Home = (props) => {
+const Home = () => {
   const email = localStorage.getItem("email");
   const user = email ? email.split("@")[0] : "Guest";
   const userText = user.charAt(0).toUpperCase() + user.slice(1);

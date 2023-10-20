@@ -9,3 +9,9 @@
 .actions {
   text-align: center;
 }
+
+.tooltip {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
